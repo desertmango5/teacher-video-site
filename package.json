@@ -16,6 +16,7 @@
     "gatsby-source-filesystem": "^1.5.20",
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.2.0",
+    "react-player": "^1.1.2",
     "react-router-dom": "^4.2.2",
     "slash": "^1.0.0"
   },

@@ -1,6 +1,9 @@
 .hero {
   width: 100%;
   display: flex;
+  border: {
+    bottom: 0.3rem solid #000;
+  }
 }
 
 .hero__image {
@@ -50,6 +53,11 @@
 .hero__button:hover {
   cursor: pointer;
   box-shadow: 0 1px 4px #aaa;
+}
+
+.bottom_frame {
+  height: 4rem;
+  background: #000;
 }
 
 /********************************

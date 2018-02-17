@@ -17,12 +17,6 @@ html {
   box-sizing: inherit;
 }
 
-// set width & position of main body of pages
-.main-body {
-
-}
-
-
 // set default headers
 h1 {
   font: {
@@ -30,9 +24,21 @@ h1 {
   }
 }
 
+h2 {
+  font: {
+    size: 3.2rem;
+  }
+}
+
 h3 {
   font: {
     size: 2.7rem;
+  }
+}
+
+h4 {
+  font: {
+    size: 2.3rem;
   }
 }
 
