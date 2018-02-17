@@ -1,13 +1,15 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Practice English at Home
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+## Middle East KG English Teacher Resource Site
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+A collection of youTube videos collected in one place. Students can watch videos at home to practice their English.
 
-## Deploy
+**Subjects:**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+* Language (English)
+* Math
+* Science
+
+### Contentful CMS
+
+A Contentful CMS will be connected so that new videos can be added by the teacher.

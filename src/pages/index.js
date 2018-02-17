@@ -1,9 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import style from '../styles/index.module.scss'
+import Hero from '../components/Hero'
 
 const IndexPage = () => (
   <div>
-    
+    <Hero />
   </div>
 )
 
