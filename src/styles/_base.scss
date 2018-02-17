@@ -1,0 +1,31 @@
+/***
+  Base/default styles for site
+***/
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  font: {
+    size: 10px;
+  }
+  background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// set width & position of main body of pages
+.main-body {
+
+}
+
+
+// set default headers
+h1 {
+  font: {
+    size: 3.6rem;
+  }
+}

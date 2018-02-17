@@ -1,0 +1,31 @@
+.header {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(150deg, slateblue, lightgreen, salmon);
+}
+
+.title {
+  padding: 2rem;
+}
+
+.title__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu {
+  height: 4rem;
+  background: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  color: #eee;
+  font: {
+    size: 2rem;
+  }
+  margin: 0 2rem;
+  text-decoration: none;
+}
