@@ -3,22 +3,33 @@ import VideoComponent from '../components/VideoComponent'
 import style from '../styles/math.module.scss'
 
 
-const Math = ({ data }) => (
-  <div>
-    <h2 className={style.main__heading}>Math Videos</h2>
-    <section className={style.videos}>
-      <hr/>
-      {data.allContentfulVideo.edges.map((video) => (
-        <div key={video.node.id}>
-          <VideoComponent 
-            subject={video.node.subject}
-            videoId={video.node.videoId}
-          />
-        </div>
-      ))}
-    </section>
-  </div>
-)
+class Math extends React.Component {
+  render() {
+
+    const videos = this.props.data.allContentfulVideo.edges
+    // filter for 'Math' videos only
+    const mathVideos = videos.filter((video) => {
+      return video.node.subject[0] === 'Math'
+    })
+
+    return (
+      <div>
+        <h2 className={style.main__heading}>Math Videos</h2>
+        <section className={style.videos}>
+          <hr/>
+          {mathVideos.map((video) => (
+            <div key={video.node.id}>
+              <VideoComponent 
+                subject={video.node.subject}
+                videoId={video.node.videoId}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
+    )
+  }
+}
 
 export default Math
 

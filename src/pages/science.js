@@ -3,22 +3,33 @@ import VideoComponent from '../components/VideoComponent'
 import style from '../styles/science.module.scss'
 
 
-const Science = ({ data }) => (
-  <div>
-    <h2 className={style.main__heading}>Science Videos</h2>
-    <section className={style.videos}>
-      <hr/>
-      {data.allContentfulVideo.edges.map((video) => (
-        <div key={video.node.id}>
-          <VideoComponent 
-            subject={video.node.subject}
-            videoId={video.node.videoId}
-          />
-        </div>
-      ))}
-    </section>
-  </div>
-)
+class Science extends React.Component {
+  render() {
+
+    const videos = this.props.data.allContentfulVideo.edges
+    // filter for 'Science' videos only
+    const scienceVideos = videos.filter((video) => {
+      return video.node.subject[0] === 'Science'
+    })
+
+    return (
+      <div>
+        <h2 className={style.main__heading}>Science Videos</h2>
+        <section className={style.videos}>
+          <hr/>
+          {scienceVideos.map((video) => (
+            <div key={video.node.id}>
+              <VideoComponent 
+                subject={video.node.subject}
+                videoId={video.node.videoId}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
+    )
+  }
+}
 
 export default Science
 
