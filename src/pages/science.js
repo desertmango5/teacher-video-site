@@ -5,6 +5,7 @@ import style from '../styles/science.module.scss'
 
 const Science = ({ data }) => (
   <div>
+    <h2 className={style.main__heading}>Science Videos</h2>
     <section className={style.videos}>
       {data.allContentfulVideo.edges.map((video) => (
         <div key={video.node.id}>
