@@ -10,11 +10,11 @@ class VideoComponent extends React.Component {
         <iframe 
           id='ytplayer'
           type='text/html'
-          width='560'
-          height='315'
+          
           src={url}
           frameBorder='0'
           allowFullScreen
+          className={style.video__player}
         >
         </iframe>
       </div>

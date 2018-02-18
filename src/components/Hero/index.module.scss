@@ -55,7 +55,9 @@
 
 .hero__button:hover {
   cursor: pointer;
-  box-shadow: 0 1px 4px #aaa;
+  background: #fff;
+  color: slateblue;
+  transform: translateY(-0.8rem);
 }
 
 .bottom_frame {
