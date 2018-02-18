@@ -1,1 +1,26 @@
+@import '../styles/_variables.scss';
 
+.main__body {
+  display: flex;
+  justify-content: center;
+  padding: 0 4rem;
+}
+
+.main__heading {
+  margin: 8rem 0 3rem 0;
+  color: salmon;
+}
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 90%;
+  margin: {
+    bottom: 10rem;
+  }
+  color: rgba(255,255,255,0.1);
+}

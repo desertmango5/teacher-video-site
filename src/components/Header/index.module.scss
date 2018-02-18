@@ -1,11 +1,14 @@
+@import '../../styles/_variables.scss';
+
 .header {
   margin: 0;
   padding: 0;
-  background: linear-gradient(150deg, slateblue, lightgreen, salmon);
+  background: $gradient;
 }
 
 .title {
-  padding: 2rem;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .title__link {
@@ -14,11 +17,14 @@
 }
 
 .menu {
-  height: 4rem;
-  background: #555;
+  height: 4.5rem;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: {
+    bottom: 1px solid salmon;
+  }
 }
 
 .menu__item {
@@ -27,5 +33,14 @@
     size: 2rem;
   }
   margin: 0 2rem;
+  padding: 0.3rem 0;
   text-decoration: none;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
+}
+
+.menu__active {
+  color: slateblue;
 }

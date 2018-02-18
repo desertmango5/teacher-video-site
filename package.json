@@ -17,7 +17,8 @@
     "react-helmet": "^5.2.0",
     "react-markdown": "^3.2.0",
     "react-router-dom": "^4.2.2",
-    "slash": "^1.0.0"
+    "slash": "^1.0.0",
+    "typeface-bellefair": "0.0.54"
   },
   "keywords": [
     "gatsby"
