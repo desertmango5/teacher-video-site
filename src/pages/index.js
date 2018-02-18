@@ -7,9 +7,12 @@ const IndexPage = ({ data }) => (
   <div>
     <Hero />
     <main className={style.main__body}>
-      <h2 className={style.main__heading}>Recently Added Videos</h2>
+      <div className={style.main__transform}>
+        <h2 className={style.main__heading}>Recently Added Videos</h2>
+      </div>
     </main>
     <section className={style.videos}>
+      <hr/>
       {data.allContentfulVideo.edges.map((video) => (
         <div key={video.node.id}>
           <VideoComponent 

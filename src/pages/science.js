@@ -7,6 +7,7 @@ const Science = ({ data }) => (
   <div>
     <h2 className={style.main__heading}>Science Videos</h2>
     <section className={style.videos}>
+      <hr/>
       {data.allContentfulVideo.edges.map((video) => (
         <div key={video.node.id}>
           <VideoComponent 

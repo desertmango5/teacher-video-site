@@ -7,6 +7,7 @@ const Math = ({ data }) => (
   <div>
     <h2 className={style.main__heading}>Math Videos</h2>
     <section className={style.videos}>
+      <hr/>
       {data.allContentfulVideo.edges.map((video) => (
         <div key={video.node.id}>
           <VideoComponent 

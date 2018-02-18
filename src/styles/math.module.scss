@@ -5,6 +5,15 @@
 }
 
 .main__heading {
-  margin: 8rem 0;
+  margin: 8rem 0 2rem 0;
   text-align: center;
+  color: salmon;
+}
+
+hr {
+  width: 90%;
+  margin: {
+    bottom: 10rem;
+  }
+  color: rgba(255,255,255,0.1);
 }

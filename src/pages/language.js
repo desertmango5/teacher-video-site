@@ -6,6 +6,7 @@ const Language = ({ data }) => (
   <div>
     <h2 className={style.main__heading}>Language Videos</h2>
     <section className={style.videos}>
+      <hr/>
       {data.allContentfulVideo.edges.map((video) => (
         <div key={video.node.id}>
           <VideoComponent 
