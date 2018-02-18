@@ -3,19 +3,41 @@ import style from '../styles/index.module.scss'
 import Hero from '../components/Hero'
 import VideoComponent from '../components/VideoComponent'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div>
     <Hero />
     <main className={style.main__body}>
       <h2 className={style.main__heading}>Recently Added Videos</h2>
     </main>
     <section className={style.videos}>
-      <VideoComponent 
-        subject="Math"
-        videoId="Xh9jAD1ofm4" 
-      />
+      {data.allContentfulVideo.edges.map((video) => (
+        <div key={video.node.id}>
+          <VideoComponent 
+            subject={video.node.subject}
+            videoId={video.node.videoId} 
+          />
+        </div>
+      ))}
     </section>
   </div>
 )
 
 export default IndexPage
+
+export const recentVideos = graphql`
+  query ThreeMostRecent {
+    allContentfulVideo(
+      sort: { fields: [date], order: DESC }
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          date
+          subject
+          videoId
+        }
+      }
+    }
+  }
+`
