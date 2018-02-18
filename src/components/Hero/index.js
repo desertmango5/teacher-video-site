@@ -11,7 +11,7 @@ const Hero = () => (
         className={style.hero__image}
       />
       <section className={style.hero__text}>
-        <h3 className={style.hero__h3}>Learning Videos</h3>
+        <h3 className={style.hero__h3}>KG1 English Videos</h3>
         <h5 className={style.hero__h5}>Practice your English at home</h5>
         <section className={style.hero__buttons}>
           <Link to="/language/">

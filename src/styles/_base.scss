@@ -10,6 +10,10 @@ html {
   }
   background-color: #222;
   color: #fff;
+  font: {
+    family: Bellefair, sans-serif;
+  }
+  letter-spacing: 0.15rem;
 }
 
 *,
@@ -21,7 +25,7 @@ html {
 // set default headers
 h1 {
   font: {
-    size: 3.6rem;
+    size: 5rem;
   }
 }
 
@@ -45,6 +49,12 @@ h4 {
 
 h5 {
   font: {
-    size: 1.3rem;
+    size: 1.5rem;
+  }
+}
+
+p {
+  font: {
+    size: 1.2rem;
   }
 }

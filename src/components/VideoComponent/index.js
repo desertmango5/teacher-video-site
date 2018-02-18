@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
 import style from './index.module.scss'
 
 class VideoComponent extends React.Component {
