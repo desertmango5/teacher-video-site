@@ -7,7 +7,8 @@
 }
 
 .title {
-  padding: 2rem 8rem;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .title__link {
@@ -16,11 +17,14 @@
 }
 
 .menu {
-  height: 4rem;
+  height: 4.5rem;
   background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: {
+    bottom: 1px solid salmon;
+  }
 }
 
 .menu__item {
@@ -29,5 +33,14 @@
     size: 2rem;
   }
   margin: 0 2rem;
+  padding: 0.3rem 0;
   text-decoration: none;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
+}
+
+.menu__active {
+  color: lightgreen;
 }
