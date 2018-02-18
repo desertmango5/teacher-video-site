@@ -17,3 +17,38 @@
   }
   color: #aaa;
 }
+
+.video__player {
+  width: 560px;
+  height: 315px;
+}
+
+
+/*******************************
+        MEDIA QUERIES
+*******************************/
+
+@media(max-width: 550px) {
+
+  .video__player {
+    width: 420px;
+    height: 236px;
+  }
+}
+
+@media(max-width: 450px) {
+
+  .video__player {
+    width: 373px;
+    height: 210px;
+  }
+}
+
+@media(max-width: 400px) {
+
+  .video__player {
+    width: 280px;
+    height: 158px;
+  }
+}
+
