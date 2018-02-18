@@ -9,7 +9,7 @@ class Science extends React.Component {
     const videos = this.props.data.allContentfulVideo.edges
     // filter for 'Science' videos only
     const scienceVideos = videos.filter((video) => {
-      return video.node.subject[0] === 'Science'
+      return video.node.subject === 'Science'
     })
 
     const number = scienceVideos.length

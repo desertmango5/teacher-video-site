@@ -2,24 +2,24 @@ import React from 'react'
 import VideoComponent from '../components/VideoComponent'
 import style from '../styles/language.module.scss'
 
-class Language extends React.Component {
+class English extends React.Component {
   render() {
 
     const videos = this.props.data.allContentfulVideo.edges
-    // filter for 'Language' videos only
-    const languageVideos = videos.filter((video) => {
-      return video.node.subject[0] === 'Language'
+    // filter for 'English' videos only
+    const englishVideos = videos.filter((video) => {
+      return video.node.subject === 'English'
     })
 
-    const number = languageVideos.length
+    const number = englishVideos.length
 
     return (
       <div>
-        <h2 className={style.main__heading}>Language Videos</h2>
+        <h2 className={style.main__heading}>English Videos</h2>
         <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
-          {languageVideos.map((video) => (
+          {englishVideos.map((video) => (
               <div key={video.node.id}>
                   <VideoComponent 
                     subject={video.node.subject}
@@ -33,10 +33,10 @@ class Language extends React.Component {
   }
 } 
 
-export default Language
+export default English
 
-export const languageVideos = graphql`
-  query LanguageVideos {
+export const englishVideos = graphql`
+  query EnglishVideos {
     allContentfulVideo(
       sort: { fields: [date], order: DESC }
     ) {

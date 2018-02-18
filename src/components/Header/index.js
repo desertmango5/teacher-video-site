@@ -12,11 +12,11 @@ const Header = () => (
     </div>
     <nav className={style.menu}>
       <NavLink
-        to='/language/'
+        to='/english/'
         className={style.menu__item}
         activeClassName={style.menu__active}
       >
-        Language
+        English
       </NavLink>
       <NavLink
         to='/math/'

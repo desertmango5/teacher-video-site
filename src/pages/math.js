@@ -9,7 +9,7 @@ class Math extends React.Component {
     const videos = this.props.data.allContentfulVideo.edges
     // filter for 'Math' videos only
     const mathVideos = videos.filter((video) => {
-      return video.node.subject[0] === 'Math'
+      return video.node.subject === 'Math'
     })
 
     const number = mathVideos.length
