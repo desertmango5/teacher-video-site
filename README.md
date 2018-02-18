@@ -13,3 +13,5 @@ A collection of youTube videos collected in one place. Students can watch videos
 ### Contentful CMS
 
 A Contentful CMS will be connected so that new videos can be added by the teacher.
+
+![alt text](https://github.com/MichaelKeithM/images/blob/master/teacher-video-home.jpg)
