@@ -11,9 +11,12 @@ class Language extends React.Component {
       return video.node.subject[0] === 'Language'
     })
 
+    const number = languageVideos.length
+
     return (
       <div>
         <h2 className={style.main__heading}>Language Videos</h2>
+        <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
           {languageVideos.map((video) => (

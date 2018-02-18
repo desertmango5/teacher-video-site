@@ -12,9 +12,12 @@ class Math extends React.Component {
       return video.node.subject[0] === 'Math'
     })
 
+    const number = mathVideos.length
+
     return (
       <div>
         <h2 className={style.main__heading}>Math Videos</h2>
+        <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
           {mathVideos.map((video) => (

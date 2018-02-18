@@ -12,9 +12,12 @@ class Science extends React.Component {
       return video.node.subject[0] === 'Science'
     })
 
+    const number = scienceVideos.length
+
     return (
       <div>
         <h2 className={style.main__heading}>Science Videos</h2>
+        <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
           {scienceVideos.map((video) => (

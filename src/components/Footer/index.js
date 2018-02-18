@@ -35,6 +35,7 @@ const Footer = () => (
         </a>
       </div>
       <p className={style.copyright}>Copyright &copy; 2018 Kelly Manges</p>
+      <p className={style.disclaimer}>All videos are intended for educational purposes only.</p>
     </footer>
   </div>
 )
