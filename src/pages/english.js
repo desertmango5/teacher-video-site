@@ -6,12 +6,7 @@ class English extends React.Component {
   render() {
 
     const videos = this.props.data.allContentfulVideo.edges
-    // filter for 'English' videos only
-    const englishVideos = videos.filter((video) => {
-      return video.node.subject === 'English'
-    })
-
-    const number = englishVideos.length
+    const number = videos.length
 
     return (
       <div>
@@ -19,7 +14,7 @@ class English extends React.Component {
         <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
-          {englishVideos.map((video) => (
+          {videos.map((video) => (
               <div key={video.node.id}>
                   <VideoComponent 
                     subject={video.node.subject}
@@ -38,6 +33,7 @@ export default English
 export const englishVideos = graphql`
   query EnglishVideos {
     allContentfulVideo(
+      filter: { subject: { eq: "English" }}
       sort: { fields: [date], order: DESC }
     ) {
       edges {

@@ -7,12 +7,7 @@ class Science extends React.Component {
   render() {
 
     const videos = this.props.data.allContentfulVideo.edges
-    // filter for 'Science' videos only
-    const scienceVideos = videos.filter((video) => {
-      return video.node.subject === 'Science'
-    })
-
-    const number = scienceVideos.length
+    const number = videos.length
 
     return (
       <div>
@@ -20,7 +15,7 @@ class Science extends React.Component {
         <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
-          {scienceVideos.map((video) => (
+          {videos.map((video) => (
             <div key={video.node.id}>
               <VideoComponent 
                 subject={video.node.subject}
@@ -39,6 +34,7 @@ export default Science
 export const scienceVideos = graphql`
   query ScienceVideos {
     allContentfulVideo(
+      filter: { subject: { eq: "Science" }}
       sort: { fields: [date], order: DESC }
     ) {
       edges {

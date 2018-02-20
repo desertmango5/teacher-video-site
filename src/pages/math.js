@@ -7,12 +7,7 @@ class Math extends React.Component {
   render() {
 
     const videos = this.props.data.allContentfulVideo.edges
-    // filter for 'Math' videos only
-    const mathVideos = videos.filter((video) => {
-      return video.node.subject === 'Math'
-    })
-
-    const number = mathVideos.length
+    const number = videos.length
 
     return (
       <div>
@@ -20,7 +15,7 @@ class Math extends React.Component {
         <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
         <section className={style.videos}>
           <hr/>
-          {mathVideos.map((video) => (
+          {videos.map((video) => (
             <div key={video.node.id}>
               <VideoComponent 
                 subject={video.node.subject}
@@ -39,6 +34,7 @@ export default Math
 export const mathVideos = graphql`
   query MathVideos {
     allContentfulVideo(
+      filter: { subject: { eq: "Math" }}
       sort: { fields: [date], order: DESC }
     ) {
       edges {
