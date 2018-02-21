@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import style from './index.module.scss'
+import React from 'react';
+import Link from 'gatsby-link';
+import style from './index.module.scss';
 
 const Hero = () => (
   <div>
     <div className={style.hero}>
       <img
-        src="https://res.cloudinary.com/djsqo4kys/image/upload/f_auto/v1518877802/hero-sm_gnkbhy.jpg"
+        src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_ID}/image/upload/f_auto/v1518877802/hero-sm_gnkbhy.jpg`}
         alt="silhouette of boy reading a book"
         className={style.hero__image}
       />
@@ -27,6 +27,6 @@ const Hero = () => (
       </section>
     </div>
   </div>
-)
+);
 
-export default Hero
+export default Hero; 

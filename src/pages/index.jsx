@@ -1,8 +1,8 @@
-import React from 'react'
-import style from '../styles/index.module.scss'
-import 'typeface-bellefair'
-import Hero from '../components/Hero'
-import VideoComponent from '../components/VideoComponent'
+import React from 'react';
+import style from '../styles/index.module.scss';
+import 'typeface-bellefair';
+import Hero from '../components/Hero';
+import VideoComponent from '../components/VideoComponent';
 
 const IndexPage = ({ data }) => (
   <div>
@@ -13,10 +13,11 @@ const IndexPage = ({ data }) => (
       </div>
     </main>
     <section className={style.videos}>
-      <hr/>
-      {data.allContentfulVideo.edges.map((video) => (
+      <hr />
+      {data.allContentfulVideo.edges.map(video => (
         <div key={video.node.id}>
           <VideoComponent 
+            title={video.node.title}
             subject={video.node.subject}
             videoId={video.node.videoId} 
           />
@@ -24,9 +25,9 @@ const IndexPage = ({ data }) => (
       ))}
     </section>
   </div>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const recentVideos = graphql`
   query ThreeMostRecent {
@@ -38,10 +39,11 @@ export const recentVideos = graphql`
         node {
           id
           date
+          title
           subject
           videoId
         }
       }
     }
   }
-`
+`; 

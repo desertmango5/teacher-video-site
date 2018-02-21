@@ -1,35 +1,34 @@
-import React from 'react' 
-import VideoComponent from '../components/VideoComponent'
-import style from '../styles/science.module.scss'
+import React from 'react'; 
+import VideoComponent from '../components/VideoComponent';
+import style from '../styles/science.module.scss';
 
 
-class Science extends React.Component {
-  render() {
+const Science = (props) => {
+  const videos = props.data.allContentfulVideo.edges;
+  const number = videos.length;
 
-    const videos = this.props.data.allContentfulVideo.edges
-    const number = videos.length
+  return (
+    <div>
+      <h2 className={style.main__heading}>Science Videos</h2>
+      <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
+      <section className={style.videos}>
+        <hr />
+        {videos.map(video => (
+          <div key={video.node.id}>
+            <VideoComponent 
+              title={video.node.title}
+              subject={video.node.subject}
+              videoId={video.node.videoId}
+            />
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <h2 className={style.main__heading}>Science Videos</h2>
-        <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
-        <section className={style.videos}>
-          <hr/>
-          {videos.map((video) => (
-            <div key={video.node.id}>
-              <VideoComponent 
-                subject={video.node.subject}
-                videoId={video.node.videoId}
-              />
-            </div>
-          ))}
-        </section>
-      </div>
-    )
-  }
-}
 
-export default Science
+export default Science;
 
 export const scienceVideos = graphql`
   query ScienceVideos {
@@ -41,10 +40,11 @@ export const scienceVideos = graphql`
         node {
           id
           date
+          title
           subject
           videoId
         }
       }
     }
   }
-`
+`;

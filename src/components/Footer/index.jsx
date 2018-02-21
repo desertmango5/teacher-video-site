@@ -1,8 +1,8 @@
-import React from 'react' 
-import style from './index.module.scss' 
-import Gatsby from '../../assets/icons/gatsby-logo.png'
-import Netlify from '../../assets/icons/netlify-logo.png'
-import Contentful from '../../assets/icons/contentful-logo.png'
+import React from 'react'; 
+import style from './index.module.scss'; 
+import Gatsby from '../../assets/icons/gatsby-logo.png';
+import Netlify from '../../assets/icons/netlify-logo.png';
+import Contentful from '../../assets/icons/contentful-logo.png';
 
 const Footer = () => (
   <div>
@@ -38,6 +38,7 @@ const Footer = () => (
       <p className={style.disclaimer}>All videos are intended for educational purposes only.</p>
     </footer>
   </div>
-)
+);
 
-export default Footer
+export default Footer;
+

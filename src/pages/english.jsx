@@ -1,34 +1,33 @@
-import React from 'react' 
-import VideoComponent from '../components/VideoComponent'
-import style from '../styles/language.module.scss'
+import React from 'react'; 
+import VideoComponent from '../components/VideoComponent';
+import style from '../styles/language.module.scss';
 
-class English extends React.Component {
-  render() {
+const English = (props) => {
+  const videos = props.data.allContentfulVideo.edges;
+  const number = videos.length;
 
-    const videos = this.props.data.allContentfulVideo.edges
-    const number = videos.length
+  return (
+    <div>
+      <h2 className={style.main__heading}>English Videos</h2>
+      <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
+      <section className={style.videos}>
+        <hr />
+        {videos.map(video => (
+          <div key={video.node.id}>
+            <VideoComponent 
+              title={video.node.title}
+              subject={video.node.subject}
+              videoId={video.node.videoId}
+            />
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <h2 className={style.main__heading}>English Videos</h2>
-        <h5 className={style.number}>{number} {number > 1 ? 'Videos' : 'Video'}</h5>
-        <section className={style.videos}>
-          <hr/>
-          {videos.map((video) => (
-              <div key={video.node.id}>
-                  <VideoComponent 
-                    subject={video.node.subject}
-                    videoId={video.node.videoId}
-                  />
-              </div>
-          ))}
-        </section>
-      </div>
-    )
-  }
-} 
 
-export default English
+export default English;
 
 export const englishVideos = graphql`
   query EnglishVideos {
@@ -40,10 +39,12 @@ export const englishVideos = graphql`
         node {
           id
           date
+          title
           subject
           videoId
         }
       }
     }
   }
-`
+`;
+
