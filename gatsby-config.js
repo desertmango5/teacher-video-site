@@ -1,5 +1,5 @@
-require('dotenv').config({ path: './.env.development' })
-const autoprefixer = require('autoprefixer')
+require('dotenv').config({ path: './.env.development' });
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
@@ -30,4 +30,4 @@ module.exports = {
       },
     },
   ],
-};
+}; 

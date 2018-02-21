@@ -1,0 +1,29 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "no-unused-expressions": 0,
+    "no-unused-vars": 0,
+    "no-console": 1,
+    "func-names": 0,
+    "import": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "no-undef": 0,
+    "no-new": 0,
+    "import/first": 0,
+    "no-useless-rename": 0,
+    "semi": 2,
+    "no-trailing-spaces": 0,
+    "comma-dangle": 2,
+    "indent": 0,
+    "max-len": 0,
+    "react/no-unescaped-entities": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/prop-types": 0,
+    "quotes": ["off", "backticks"]
+  }
+}
